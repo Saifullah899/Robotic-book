@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "website/package.json",
@@ -13,5 +14,9 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  }
 }

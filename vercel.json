@@ -1,6 +1,4 @@
 {
-  "framework": "docusaurus",
-  "rootDirectory": "website",
   "builds": [
     {
       "src": "website/package.json",

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-2-foundations/chapter" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Chapter 2 - Robot Components and Basic Control | Physical AI &amp; Humanoid Robotics – Essentials</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://saifullah899.github.io/Robotic-book/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://saifullah899.github.io/Robotic-book/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://saifullah899.github.io/Robotic-book/docs/chapter-2-foundations/chapter"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Chapter 2 - Robot Components and Basic Control | Physical AI &amp; Humanoid Robotics – Essentials"><meta data-rh="true" name="description" content="Understanding the fundamental components of robots - sensors, actuators, controllers, mechanical structures, and basic control logic"><meta data-rh="true" property="og:description" content="Understanding the fundamental components of robots - sensors, actuators, controllers, mechanical structures, and basic control logic"><link data-rh="true" rel="icon" href="/Robotic-book/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://saifullah899.github.io/Robotic-book/docs/chapter-2-foundations/chapter"><link data-rh="true" rel="alternate" href="https://saifullah899.github.io/Robotic-book/docs/chapter-2-foundations/chapter" hreflang="en"><link data-rh="true" rel="alternate" href="https://saifullah899.github.io/Robotic-book/docs/chapter-2-foundations/chapter" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Chapter 2 - Robot Components and Basic Control","item":"https://saifullah899.github.io/Robotic-book/docs/chapter-2-foundations/chapter"}]}</script><link rel="stylesheet" href="/Robotic-book/assets/css/styles.56257ffb.css">
+<script src="/Robotic-book/assets/js/runtime~main.fc169dee.js" defer="defer"></script>
+<script src="/Robotic-book/assets/js/main.b9c1f022.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Robotic-book/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Robotic-book/"><div class="navbar__logo"><img src="/Robotic-book/img/logo.svg" alt="Physical AI &amp; Humanoid Robotics Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Robotic-book/img/logo.svg" alt="Physical AI &amp; Humanoid Robotics Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI Textbook</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Robotic-book/docs/chapter-1-introduction/chapter">Textbook</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Saifullah899/Robotic-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Robotic-book/docs/chapter-1-introduction/chapter"><span title="Physical AI &amp; Humanoid Robotics" class="categoryLinkLabel_W154">Physical AI &amp; Humanoid Robotics</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Robotic-book/docs/chapter-1-introduction/chapter"><span title="Introduction to Physical AI" class="linkLabel_WmDU">Introduction to Physical AI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Robotic-book/docs/chapter-2-foundations/chapter"><span title="Chapter 2 - Robot Components and Basic Control" class="linkLabel_WmDU">Chapter 2 - Robot Components and Basic Control</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Robotic-book/docs/chapter-3-perception/chapter"><span title="Chapter 3 - Perception and Sensing" class="linkLabel_WmDU">Chapter 3 - Perception and Sensing</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Robotic-book/docs/chapter-4-motion/chapter"><span title="Chapter 4 - Motion Planning and Control" class="linkLabel_WmDU">Chapter 4 - Motion Planning and Control</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Robotic-book/docs/chapter-5-manipulation/chapter"><span title="Chapter 5 - Manipulation and Interaction" class="linkLabel_WmDU">Chapter 5 - Manipulation and Interaction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Robotic-book/docs/chapter-6-advanced/chapter"><span title="Chapter 6 - Advanced Topics in Physical AI" class="linkLabel_WmDU">Chapter 6 - Advanced Topics in Physical AI</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Robotic-book/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Physical AI &amp; Humanoid Robotics</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Chapter 2 - Robot Components and Basic Control</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Chapter 2: Robot Components and Basic Control</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li class="">Identify and describe the main components of a robot system</li>
+<li class="">Explain the functions of sensors, actuators, and controllers in robotic systems</li>
+<li class="">Understand the role of mechanical structures in robot design</li>
+<li class="">Describe basic control logic and feedback systems</li>
+<li class="">Analyze how components work together to achieve robotic functionality</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
+<p>Robots are complex systems composed of multiple interconnected components that work together to perform tasks in the physical world. Understanding these components is fundamental to developing effective Physical AI systems. This chapter explores the essential building blocks of robots and how they interact to create intelligent, adaptive machines.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-sensors-the-robots-senses">2.1 Sensors: The Robot&#x27;s Senses<a href="#21-sensors-the-robots-senses" class="hash-link" aria-label="Direct link to 2.1 Sensors: The Robot&#x27;s Senses" title="Direct link to 2.1 Sensors: The Robot&#x27;s Senses" translate="no">​</a></h2>
+<p>Sensors serve as the eyes, ears, and skin of robots, enabling them to perceive their environment and internal states. They convert physical phenomena into electrical signals that can be processed by the robot&#x27;s control system.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="211-types-of-sensors">2.1.1 Types of Sensors<a href="#211-types-of-sensors" class="hash-link" aria-label="Direct link to 2.1.1 Types of Sensors" title="Direct link to 2.1.1 Types of Sensors" translate="no">​</a></h3>
+<p><strong>Proprioceptive Sensors</strong>: These sensors monitor the robot&#x27;s internal state, including:</p>
+<ul>
+<li class="">Joint encoders: Measure joint angles and positions</li>
+<li class="">Force/torque sensors: Detect forces applied to robot limbs</li>
+<li class="">Inertial measurement units (IMUs): Measure acceleration, angular velocity, and orientation</li>
+<li class="">Temperature sensors: Monitor internal component temperatures</li>
+</ul>
+<p><strong>Exteroceptive Sensors</strong>: These sensors perceive the external environment:</p>
+<ul>
+<li class="">Cameras: Provide visual information for object recognition and navigation</li>
+<li class="">LiDAR: Measures distances using laser light for 3D mapping</li>
+<li class="">Ultrasonic sensors: Detect obstacles using sound waves</li>
+<li class="">Tactile sensors: Sense contact and pressure on robot surfaces</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="212-sensor-integration-and-fusion">2.1.2 Sensor Integration and Fusion<a href="#212-sensor-integration-and-fusion" class="hash-link" aria-label="Direct link to 2.1.2 Sensor Integration and Fusion" title="Direct link to 2.1.2 Sensor Integration and Fusion" translate="no">​</a></h3>
+<p>Modern robots typically use multiple sensors to create a comprehensive understanding of their environment. Sensor fusion algorithms combine data from different sensors to improve accuracy and reliability. For example, a mobile robot might use wheel encoders for odometry, an IMU for orientation, and cameras for visual landmarks to estimate its position more accurately than any single sensor could provide.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-actuators-the-robots-muscles">2.2 Actuators: The Robot&#x27;s Muscles<a href="#22-actuators-the-robots-muscles" class="hash-link" aria-label="Direct link to 2.2 Actuators: The Robot&#x27;s Muscles" title="Direct link to 2.2 Actuators: The Robot&#x27;s Muscles" translate="no">​</a></h2>
+<p>Actuators are the components that enable robots to move and interact with their environment. They convert electrical energy into mechanical motion, allowing robots to perform physical tasks.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="221-types-of-actuators">2.2.1 Types of Actuators<a href="#221-types-of-actuators" class="hash-link" aria-label="Direct link to 2.2.1 Types of Actuators" title="Direct link to 2.2.1 Types of Actuators" translate="no">​</a></h3>
+<p><strong>Electric Motors</strong>: The most common actuators in robotics:</p>
+<ul>
+<li class="">DC motors: Simple and efficient for basic rotational motion</li>
+<li class="">Servo motors: Provide precise position control with built-in feedback</li>
+<li class="">Stepper motors: Move in discrete steps for precise positioning</li>
+<li class="">Brushless DC motors: Offer high efficiency and long life</li>
+</ul>
+<p><strong>Hydraulic and Pneumatic Actuators</strong>: Use fluid pressure to generate force:</p>
+<ul>
+<li class="">Hydraulic actuators: Provide high force and precise control, common in industrial robots</li>
+<li class="">Pneumatic actuators: Offer quick response and are suitable for lightweight applications</li>
+</ul>
+<p><strong>Specialized Actuators</strong>: Emerging technologies for specific applications:</p>
+<ul>
+<li class="">Shape memory alloys: Change shape when heated</li>
+<li class="">Electroactive polymers: Deform when voltage is applied</li>
+<li class="">Artificial muscles: Mimic biological muscle behavior</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="222-actuator-control">2.2.2 Actuator Control<a href="#222-actuator-control" class="hash-link" aria-label="Direct link to 2.2.2 Actuator Control" title="Direct link to 2.2.2 Actuator Control" translate="no">​</a></h3>
+<p>Actuator control involves managing the power, speed, and precision of movement. Key considerations include:</p>
+<ul>
+<li class="">Torque control: Managing the force output of actuators</li>
+<li class="">Position control: Ensuring actuators reach desired positions</li>
+<li class="">Velocity control: Managing the speed of movements</li>
+<li class="">Compliance control: Allowing controlled flexibility in robot movements</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="23-controllers-the-robots-brain">2.3 Controllers: The Robot&#x27;s Brain<a href="#23-controllers-the-robots-brain" class="hash-link" aria-label="Direct link to 2.3 Controllers: The Robot&#x27;s Brain" title="Direct link to 2.3 Controllers: The Robot&#x27;s Brain" translate="no">​</a></h2>
+<p>Controllers process sensor data and generate commands for actuators, forming the decision-making center of robotic systems. They range from simple microcontrollers to complex computer systems.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="231-control-architecture">2.3.1 Control Architecture<a href="#231-control-architecture" class="hash-link" aria-label="Direct link to 2.3.1 Control Architecture" title="Direct link to 2.3.1 Control Architecture" translate="no">​</a></h3>
+<p><strong>Centralized Control</strong>: A single controller manages all robot functions:</p>
+<ul>
+<li class="">Advantages: Coordinated behavior, global optimization</li>
+<li class="">Disadvantages: Single point of failure, computational bottlenecks</li>
+</ul>
+<p><strong>Distributed Control</strong>: Multiple controllers manage different subsystems:</p>
+<ul>
+<li class="">Advantages: Fault tolerance, parallel processing</li>
+<li class="">Disadvantages: Coordination challenges, communication overhead</li>
+</ul>
+<p><strong>Hierarchical Control</strong>: Controllers organized in layers with different responsibilities:</p>
+<ul>
+<li class="">High-level: Task planning and decision making</li>
+<li class="">Mid-level: Trajectory generation and coordination</li>
+<li class="">Low-level: Real-time actuator control</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="232-control-algorithms">2.3.2 Control Algorithms<a href="#232-control-algorithms" class="hash-link" aria-label="Direct link to 2.3.2 Control Algorithms" title="Direct link to 2.3.2 Control Algorithms" translate="no">​</a></h3>
+<p>Controllers implement various algorithms to achieve desired behaviors:</p>
+<ul>
+<li class="">PID controllers: Proportional-Integral-Derivative control for stable regulation</li>
+<li class="">Model predictive control: Uses system models to optimize future behavior</li>
+<li class="">Adaptive control: Adjusts parameters based on changing conditions</li>
+<li class="">Learning-based control: Uses machine learning to improve performance over time</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="24-mechanical-structures-the-robots-body">2.4 Mechanical Structures: The Robot&#x27;s Body<a href="#24-mechanical-structures-the-robots-body" class="hash-link" aria-label="Direct link to 2.4 Mechanical Structures: The Robot&#x27;s Body" title="Direct link to 2.4 Mechanical Structures: The Robot&#x27;s Body" translate="no">​</a></h2>
+<p>Mechanical structures provide the physical framework that supports all other components and determines the robot&#x27;s form and function. The design of mechanical structures significantly impacts robot performance.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="241-structural-design-principles">2.4.1 Structural Design Principles<a href="#241-structural-design-principles" class="hash-link" aria-label="Direct link to 2.4.1 Structural Design Principles" title="Direct link to 2.4.1 Structural Design Principles" translate="no">​</a></h3>
+<p><strong>Stiffness vs. Compliance</strong>: Balancing rigidity for precision with flexibility for safety:</p>
+<ul>
+<li class="">Rigid structures: Provide precise positioning but may cause damage in collisions</li>
+<li class="">Compliant structures: Safer for human interaction but less precise</li>
+<li class="">Variable compliance: Adjustable stiffness for different tasks</li>
+</ul>
+<p><strong>Weight Distribution</strong>: Optimizing mass distribution for stability and mobility:</p>
+<ul>
+<li class="">Low center of gravity: Improves stability</li>
+<li class="">Balanced loads: Reduces stress on actuators</li>
+<li class="">Lightweight materials: Improves efficiency and speed</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="242-common-mechanical-configurations">2.4.2 Common Mechanical Configurations<a href="#242-common-mechanical-configurations" class="hash-link" aria-label="Direct link to 2.4.2 Common Mechanical Configurations" title="Direct link to 2.4.2 Common Mechanical Configurations" translate="no">​</a></h3>
+<p><strong>Serial Manipulators</strong>: Joints connected in sequence from base to end-effector:</p>
+<ul>
+<li class="">Advantages: Large workspace, simple control</li>
+<li class="">Disadvantages: Cumulative errors, limited payload</li>
+</ul>
+<p><strong>Parallel Manipulators</strong>: Multiple limbs connect base and end-effector:</p>
+<ul>
+<li class="">Advantages: High stiffness, good load capacity</li>
+<li class="">Disadvantages: Complex control, limited workspace</li>
+</ul>
+<p><strong>Mobile Platforms</strong>: Wheeled, legged, or tracked systems for locomotion:</p>
+<ul>
+<li class="">Wheeled: Efficient on smooth surfaces</li>
+<li class="">Legged: Navigate rough terrain</li>
+<li class="">Tracked: Good traction and stability</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="25-basic-control-logic-and-feedback-systems">2.5 Basic Control Logic and Feedback Systems<a href="#25-basic-control-logic-and-feedback-systems" class="hash-link" aria-label="Direct link to 2.5 Basic Control Logic and Feedback Systems" title="Direct link to 2.5 Basic Control Logic and Feedback Systems" translate="no">​</a></h2>
+<p>Control logic determines how robots respond to sensor inputs and achieve desired behaviors. Feedback systems ensure that robot actions align with intended goals.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="251-open-loop-vs-closed-loop-control">2.5.1 Open-Loop vs. Closed-Loop Control<a href="#251-open-loop-vs-closed-loop-control" class="hash-link" aria-label="Direct link to 2.5.1 Open-Loop vs. Closed-Loop Control" title="Direct link to 2.5.1 Open-Loop vs. Closed-Loop Control" translate="no">​</a></h3>
+<p><strong>Open-Loop Control</strong>: Commands are executed without feedback:</p>
+<ul>
+<li class="">Simple and predictable</li>
+<li class="">No correction for errors or disturbances</li>
+<li class="">Suitable for well-characterized, predictable tasks</li>
+</ul>
+<p><strong>Closed-Loop Control</strong>: Uses sensor feedback to adjust behavior:</p>
+<ul>
+<li class="">Corrects for errors and disturbances</li>
+<li class="">Adapts to changing conditions</li>
+<li class="">More robust but computationally intensive</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="252-feedback-control-systems">2.5.2 Feedback Control Systems<a href="#252-feedback-control-systems" class="hash-link" aria-label="Direct link to 2.5.2 Feedback Control Systems" title="Direct link to 2.5.2 Feedback Control Systems" translate="no">​</a></h3>
+<p>A typical feedback control system includes:</p>
+<ol>
+<li class=""><strong>Setpoint</strong>: The desired value or state</li>
+<li class=""><strong>Sensor</strong>: Measures the actual value</li>
+<li class=""><strong>Controller</strong>: Calculates the error and determines corrective action</li>
+<li class=""><strong>Actuator</strong>: Implements the corrective action</li>
+<li class=""><strong>Process</strong>: The system being controlled</li>
+</ol>
+<p>The control loop continuously measures the difference between desired and actual values, then adjusts the system to minimize this error.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="253-control-system-stability">2.5.3 Control System Stability<a href="#253-control-system-stability" class="hash-link" aria-label="Direct link to 2.5.3 Control System Stability" title="Direct link to 2.5.3 Control System Stability" translate="no">​</a></h3>
+<p>Stability is crucial for reliable robot operation:</p>
+<ul>
+<li class=""><strong>Stable systems</strong>: Return to equilibrium after disturbances</li>
+<li class=""><strong>Unstable systems</strong>: Amplify errors over time</li>
+<li class=""><strong>Marginally stable</strong>: Oscillate without converging or diverging</li>
+</ul>
+<p>Control system design must ensure stability while achieving desired performance characteristics.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="26-integration-how-components-work-together">2.6 Integration: How Components Work Together<a href="#26-integration-how-components-work-together" class="hash-link" aria-label="Direct link to 2.6 Integration: How Components Work Together" title="Direct link to 2.6 Integration: How Components Work Together" translate="no">​</a></h2>
+<p>Effective robotic systems require seamless integration of all components. This section examines how sensors, actuators, controllers, and mechanical structures interact.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="261-system-architecture">2.6.1 System Architecture<a href="#261-system-architecture" class="hash-link" aria-label="Direct link to 2.6.1 System Architecture" title="Direct link to 2.6.1 System Architecture" translate="no">​</a></h3>
+<p>A typical robot system architecture includes:</p>
+<ul>
+<li class=""><strong>Perception layer</strong>: Sensors gather information about the environment</li>
+<li class=""><strong>Planning layer</strong>: Controllers determine appropriate actions</li>
+<li class=""><strong>Execution layer</strong>: Actuators carry out planned actions</li>
+<li class=""><strong>Communication layer</strong>: Ensures coordination between components</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="262-real-time-considerations">2.6.2 Real-Time Considerations<a href="#262-real-time-considerations" class="hash-link" aria-label="Direct link to 2.6.2 Real-Time Considerations" title="Direct link to 2.6.2 Real-Time Considerations" translate="no">​</a></h3>
+<p>Robotic systems must operate in real-time, requiring:</p>
+<ul>
+<li class="">Deterministic response times</li>
+<li class="">Priority-based task scheduling</li>
+<li class="">Predictable communication delays</li>
+<li class="">Fault-tolerant operation</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="27-practical-considerations-and-trade-offs">2.7 Practical Considerations and Trade-offs<a href="#27-practical-considerations-and-trade-offs" class="hash-link" aria-label="Direct link to 2.7 Practical Considerations and Trade-offs" title="Direct link to 2.7 Practical Considerations and Trade-offs" translate="no">​</a></h2>
+<p>Designing robotic systems involves balancing multiple competing requirements:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="271-performance-vs-cost">2.7.1 Performance vs. Cost<a href="#271-performance-vs-cost" class="hash-link" aria-label="Direct link to 2.7.1 Performance vs. Cost" title="Direct link to 2.7.1 Performance vs. Cost" translate="no">​</a></h3>
+<p>Higher performance components typically cost more:</p>
+<ul>
+<li class="">Precision sensors vs. budget sensors</li>
+<li class="">High-torque actuators vs. standard actuators</li>
+<li class="">Powerful controllers vs. basic microcontrollers</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="272-robustness-vs-complexity">2.7.2 Robustness vs. Complexity<a href="#272-robustness-vs-complexity" class="hash-link" aria-label="Direct link to 2.7.2 Robustness vs. Complexity" title="Direct link to 2.7.2 Robustness vs. Complexity" translate="no">​</a></h3>
+<p>More complex systems may offer better performance but reduced reliability:</p>
+<ul>
+<li class="">Redundant sensors improve reliability but add complexity</li>
+<li class="">Multiple control algorithms increase capability but require coordination</li>
+<li class="">Advanced mechanical designs improve performance but may be harder to maintain</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="273-power-consumption-and-efficiency">2.7.3 Power Consumption and Efficiency<a href="#273-power-consumption-and-efficiency" class="hash-link" aria-label="Direct link to 2.7.3 Power Consumption and Efficiency" title="Direct link to 2.7.3 Power Consumption and Efficiency" translate="no">​</a></h3>
+<p>Power management is critical for mobile and autonomous robots:</p>
+<ul>
+<li class="">Efficient actuator selection</li>
+<li class="">Power-aware control algorithms</li>
+<li class="">Energy recovery systems</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>This chapter has explored the fundamental components of robotic systems: sensors that perceive the environment, actuators that enable movement, controllers that make decisions, and mechanical structures that provide the physical framework. Understanding how these components work individually and together is essential for developing effective Physical AI systems. The integration of these components through well-designed control systems enables robots to interact intelligently with their physical environment.</p>
+<p>The next chapter will build on this foundation by exploring how these components work together in specific robot applications and examining advanced control strategies for complex robotic behaviors.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">References<a href="#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References" translate="no">​</a></h2>
+<ol>
+<li class="">Siciliano, B., &amp; Khatib, O. (2016). Springer Handbook of Robotics. Springer.</li>
+<li class="">Spong, M. W., Hutchinson, S., &amp; Vidyasagar, M. (2006). Robot Modeling and Control. Wiley.</li>
+<li class="">Craig, J. J. (2005). Introduction to Robotics: Mechanics and Control. Pearson.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercises">Exercises<a href="#exercises" class="hash-link" aria-label="Direct link to Exercises" title="Direct link to Exercises" translate="no">​</a></h2>
+<ol>
+<li class="">Compare and contrast the advantages and disadvantages of different types of position sensors for robotic applications.</li>
+<li class="">Design a simple control system for a mobile robot that uses sensor feedback to navigate toward a target while avoiding obstacles.</li>
+<li class="">Analyze the trade-offs between using centralized vs. distributed control architectures for a humanoid robot.</li>
+<li class="">Explain how mechanical design choices affect the performance of a robot&#x27;s control system.</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Saifullah899/Robotic-book/tree/main/website/docs/chapter-2-foundations/chapter.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Robotic-book/docs/chapter-1-introduction/chapter"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Introduction to Physical AI</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Robotic-book/docs/chapter-3-perception/chapter"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Chapter 3 - Perception and Sensing</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a></li><li><a href="#21-sensors-the-robots-senses" class="table-of-contents__link toc-highlight">2.1 Sensors: The Robot&#39;s Senses</a><ul><li><a href="#211-types-of-sensors" class="table-of-contents__link toc-highlight">2.1.1 Types of Sensors</a></li><li><a href="#212-sensor-integration-and-fusion" class="table-of-contents__link toc-highlight">2.1.2 Sensor Integration and Fusion</a></li></ul></li><li><a href="#22-actuators-the-robots-muscles" class="table-of-contents__link toc-highlight">2.2 Actuators: The Robot&#39;s Muscles</a><ul><li><a href="#221-types-of-actuators" class="table-of-contents__link toc-highlight">2.2.1 Types of Actuators</a></li><li><a href="#222-actuator-control" class="table-of-contents__link toc-highlight">2.2.2 Actuator Control</a></li></ul></li><li><a href="#23-controllers-the-robots-brain" class="table-of-contents__link toc-highlight">2.3 Controllers: The Robot&#39;s Brain</a><ul><li><a href="#231-control-architecture" class="table-of-contents__link toc-highlight">2.3.1 Control Architecture</a></li><li><a href="#232-control-algorithms" class="table-of-contents__link toc-highlight">2.3.2 Control Algorithms</a></li></ul></li><li><a href="#24-mechanical-structures-the-robots-body" class="table-of-contents__link toc-highlight">2.4 Mechanical Structures: The Robot&#39;s Body</a><ul><li><a href="#241-structural-design-principles" class="table-of-contents__link toc-highlight">2.4.1 Structural Design Principles</a></li><li><a href="#242-common-mechanical-configurations" class="table-of-contents__link toc-highlight">2.4.2 Common Mechanical Configurations</a></li></ul></li><li><a href="#25-basic-control-logic-and-feedback-systems" class="table-of-contents__link toc-highlight">2.5 Basic Control Logic and Feedback Systems</a><ul><li><a href="#251-open-loop-vs-closed-loop-control" class="table-of-contents__link toc-highlight">2.5.1 Open-Loop vs. Closed-Loop Control</a></li><li><a href="#252-feedback-control-systems" class="table-of-contents__link toc-highlight">2.5.2 Feedback Control Systems</a></li><li><a href="#253-control-system-stability" class="table-of-contents__link toc-highlight">2.5.3 Control System Stability</a></li></ul></li><li><a href="#26-integration-how-components-work-together" class="table-of-contents__link toc-highlight">2.6 Integration: How Components Work Together</a><ul><li><a href="#261-system-architecture" class="table-of-contents__link toc-highlight">2.6.1 System Architecture</a></li><li><a href="#262-real-time-considerations" class="table-of-contents__link toc-highlight">2.6.2 Real-Time Considerations</a></li></ul></li><li><a href="#27-practical-considerations-and-trade-offs" class="table-of-contents__link toc-highlight">2.7 Practical Considerations and Trade-offs</a><ul><li><a href="#271-performance-vs-cost" class="table-of-contents__link toc-highlight">2.7.1 Performance vs. Cost</a></li><li><a href="#272-robustness-vs-complexity" class="table-of-contents__link toc-highlight">2.7.2 Robustness vs. Complexity</a></li><li><a href="#273-power-consumption-and-efficiency" class="table-of-contents__link toc-highlight">2.7.3 Power Consumption and Efficiency</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a></li><li><a href="#references" class="table-of-contents__link toc-highlight">References</a></li><li><a href="#exercises" class="table-of-contents__link toc-highlight">Exercises</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Robotic-book/docs/chapter-1-introduction/chapter">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Saifullah899/Robotic-book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics – Essentials. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

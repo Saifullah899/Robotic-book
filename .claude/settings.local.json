@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(ls -1d specs/*-textbook-generation)",
+      "Bash(.specify/scripts/powershell/setup-plan.ps1 -Json)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -PathsOnly)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(npm init docusaurus@latest website classic --typescript=false)",
+      "Bash(npm init docusaurus@latest . classic --typescript=false --force)",
+      "Bash(npx create-docusaurus@latest website classic --typescript=false)",
+      "Bash(npx create-docusaurus@latest website classic)",
+      "Bash(npx create-docusaurus@latest website classic --package-manager npm)",
+      "Bash(npx create-docusaurus@latest website classic --js)",
+      "Bash(npm start)",
+      "Bash(npm run build)",
+      "Bash(npm run serve)",
+      "Bash(git add .)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

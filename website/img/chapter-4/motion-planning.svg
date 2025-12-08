@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="650" viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <title>Motion Planning and Control in Physical AI</title>
+  <desc>Diagram showing motion planning concepts including path planning, trajectory generation, and control systems for robot navigation.</desc>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="900" height="650" fill="#f5f5f5" stroke="none"/>
+
+  <!-- Environment with obstacles -->
+  <rect x="100" y="100" width="200" height="40" fill="#bdbdbd" stroke="#757575" stroke-width="2"/>
+  <rect x="400" y="300" width="150" height="60" fill="#bdbdbd" stroke="#757575" stroke-width="2"/>
+  <rect x="200" y="450" width="100" height="80" fill="#bdbdbd" stroke="#757575" stroke-width="2"/>
+  <rect x="600" y="200" width="80" height="100" fill="#bdbdbd" stroke="#757575" stroke-width="2"/>
+
+  <!-- Start and Goal positions -->
+  <circle cx="50" cy="50" r="15" fill="#4caf50" stroke="#2e7d32" stroke-width="3"/>
+  <text x="50" y="45" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">START</text>
+
+  <circle cx="750" cy="550" r="15" fill="#f44336" stroke="#c62828" stroke-width="3"/>
+  <text x="750" y="545" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">GOAL</text>
+
+  <!-- Planned path (RRT-style) -->
+  <polyline points="50,50 150,80 250,150 300,250 400,350 500,400 600,450 700,500 750,550"
+            fill="none" stroke="#2196f3" stroke-width="3" stroke-dasharray="5,5"/>
+  <text x="400" y="280" text-anchor="middle" font-family="Arial" font-size="12" fill="#1565c0" font-weight="bold">Planned Path</text>
+
+  <!-- RRT nodes -->
+  <g stroke="#2196f3" stroke-width="2" fill="#bbdefb">
+    <circle cx="150" cy="80" r="6"/>
+    <circle cx="250" cy="150" r="6"/>
+    <circle cx="300" cy="250" r="6"/>
+    <circle cx="400" cy="350" r="6"/>
+    <circle cx="500" cy="400" r="6"/>
+    <circle cx="600" cy="450" r="6"/>
+    <circle cx="700" cy="500" r="6"/>
+  </g>
+
+  <!-- Robot following trajectory -->
+  <g transform="translate(300, 250)">
+    <rect x="-20" y="-15" width="40" height="25" rx="5" ry="5" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+    <circle cx="-15" cy="15" r="6" fill="#78909c" stroke="#546e7a" stroke-width="1"/>
+    <circle cx="15" cy="15" r="6" fill="#78909c" stroke="#546e7a" stroke-width="1"/>
+    <!-- Direction arrow -->
+    <polygon points="25,0 35,-5 35,5" fill="#4caf50"/>
+  </g>
+
+  <!-- Trajectory smoothing section -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="300" height="120" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="150" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Trajectory Generation</text>
+
+    <!-- Raw path -->
+    <polyline points="20,80 70,60 120,70 170,50 220,60 270,40"
+              fill="none" stroke="#f44336" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="30" y="75" font-family="Arial" font-size="9" fill="#c62828">Raw Path</text>
+
+    <!-- Smoothed trajectory -->
+    <path d="M20,80 C40,75 50,65 70,60 C90,55 100,65 120,70 C140,75 150,55 170,50 C190,45 200,50 220,60 C240,70 250,45 270,40"
+          fill="none" stroke="#4caf50" stroke-width="2"/>
+    <text x="30" y="95" font-family="Arial" font-size="9" fill="#2e7d32">Smoothed Trajectory</text>
+  </g>
+
+  <!-- Control system block diagram -->
+  <g transform="translate(500, 150)">
+    <rect x="0" y="0" width="350" height="160" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="175" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Control System</text>
+
+    <!-- Blocks -->
+    <rect x="20" y="50" width="80" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="60" y="75" text-anchor="middle" font-family="Arial" font-size="10" fill="#1565c0">Reference</text>
+
+    <rect x="130" y="50" width="80" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
+    <text x="170" y="75" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">Controller</text>
+
+    <rect x="240" y="50" width="80" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+    <text x="280" y="75" text-anchor="middle" font-family="Arial" font-size="10" fill="#e65100">Robot</text>
+
+    <!-- Feedback -->
+    <rect x="130" y="110" width="80" height="30" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
+    <text x="170" y="130" text-anchor="middle" font-family="Arial" font-size="9" fill="#880e4f">Sensor</text>
+
+    <!-- Arrows -->
+    <line x1="100" y1="70" x2="130" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="210" y1="70" x2="240" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="320" y1="70" x2="320" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="320" y1="125" x2="210" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Locomotion methods -->
+  <g transform="translate(50, 350)">
+    <rect x="0" y="0" width="400" height="100" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="200" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Locomotion Methods</text>
+
+    <!-- Wheeled robot -->
+    <g transform="translate(50, 50)">
+      <rect x="-20" y="-10" width="40" height="15" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+      <circle cx="-15" cy="10" r="6" fill="#78909c" stroke="#546e7a" stroke-width="1"/>
+      <circle cx="15" cy="10" r="6" fill="#78909c" stroke="#546e7a" stroke-width="1"/>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Wheeled</text>
+    </g>
+
+    <!-- Legged robot -->
+    <g transform="translate(150, 50)">
+      <rect x="-15" y="-15" width="30" height="20" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+      <line x1="-10" y1="5" x2="-10" y2="25" stroke="#455a64" stroke-width="2"/>
+      <line x1="10" y1="5" x2="10" y2="25" stroke="#455a64" stroke-width="2"/>
+      <text x="0" y="40" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Legged</text>
+    </g>
+
+    <!-- Aerial robot -->
+    <g transform="translate(250, 50)">
+      <circle cx="0" cy="0" r="12" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#455a64" stroke-width="2"/>
+      <line x1="0" y1="-15" x2="0" y2="15" stroke="#455a64" stroke-width="2"/>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Aerial</text>
+    </g>
+
+    <!-- Aquatic robot -->
+    <g transform="translate(350, 50)">
+      <ellipse cx="0" cy="0" rx="15" ry="8" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+      <polygon points="-10,-5 -15,0 -10,5" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Aquatic</text>
+    </g>
+  </g>
+
+  <!-- Planning hierarchy -->
+  <g transform="translate(500, 350)">
+    <rect x="0" y="0" width="350" height="200" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="175" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Planning Hierarchy</text>
+
+    <!-- Global planner -->
+    <rect x="50" y="40" width="250" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="175" y="60" text-anchor="middle" font-family="Arial" font-size="10" fill="#1565c0">Global Planner (Path Planning)</text>
+
+    <!-- Local planner -->
+    <rect x="75" y="90" width="200" height="30" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
+    <text x="175" y="110" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">Local Planner (Trajectory Generation)</text>
+
+    <!-- Controller -->
+    <rect x="100" y="140" width="150" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+    <text x="175" y="160" text-anchor="middle" font-family="Arial" font-size="10" fill="#e65100">Controller</text>
+
+    <!-- Arrows showing hierarchy -->
+    <line x1="175" y1="70" x2="175" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="175" y1="120" x2="175" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Arrowhead Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+      refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#333">Motion Planning and Control in Physical AI</text>
+  <text x="450" y="55" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Algorithms and control systems enabling robots to navigate and move in physical environments</text>
+</svg>

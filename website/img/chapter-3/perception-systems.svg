@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="650" viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <title>Perception and Sensing Systems in Physical AI</title>
+  <desc>Diagram showing various sensor types used in Physical AI systems, including cameras, LiDAR, RADAR, and their fusion for environmental understanding.</desc>
+
+  <!-- Environment/Scene Background -->
+  <rect x="0" y="0" width="900" height="650" fill="#e8f4f8" stroke="none"/>
+
+  <!-- Ground plane -->
+  <rect x="0" y="500" width="900" height="150" fill="#d7ccc8" stroke="none"/>
+  <text x="450" y="630" text-anchor="middle" font-family="Arial" font-size="14" fill="#5d4037">Ground Surface</text>
+
+  <!-- Robot representation -->
+  <g transform="translate(400, 400)">
+    <!-- Robot body -->
+    <rect x="-50" y="-80" width="100" height="120" rx="10" ry="10" fill="#f5f5f5" stroke="#455a64" stroke-width="3"/>
+    <!-- Robot head/camera -->
+    <circle cx="0" cy="-100" r="30" fill="#f5f5f5" stroke="#455a64" stroke-width="3"/>
+    <!-- Wheels -->
+    <circle cx="-35" cy="60" r="15" fill="#78909c" stroke="#546e7a" stroke-width="2"/>
+    <circle cx="35" cy="60" r="15" fill="#78909c" stroke="#546e7a" stroke-width="2"/>
+
+    <!-- Camera/Visual Sensors -->
+    <g transform="translate(0, -100)">
+      <circle cx="0" cy="0" r="15" fill="#c8e6c9" stroke="#388e3c" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="9" fill="#2e7d32">CAM</text>
+      <!-- Camera field of view -->
+      <path d="M 0 -15 L -40 -60 L 40 -60 Z" fill="#e8f5e8" stroke="#a5d6a7" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <!-- LiDAR on top -->
+    <g transform="translate(0, -120)">
+      <rect x="-15" y="-10" width="30" height="15" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="9" fill="#1565c0">LiDAR</text>
+      <!-- LiDAR beams -->
+      <g stroke="#64b5f6" stroke-width="1" opacity="0.6">
+        <line x1="0" y1="-10" x2="-80" y2="-200"/>
+        <line x1="0" y1="-10" x2="-60" y2="-200"/>
+        <line x1="0" y1="-10" x2="-40" y2="-200"/>
+        <line x1="0" y1="-10" x2="-20" y2="-200"/>
+        <line x1="0" y1="-10" x2="0" y2="-200"/>
+        <line x1="0" y1="-10" x2="20" y2="-200"/>
+        <line x1="0" y1="-10" x2="40" y2="-200"/>
+        <line x1="0" y1="-10" x2="60" y2="-200"/>
+        <line x1="0" y1="-10" x2="80" y2="-200"/>
+      </g>
+    </g>
+
+    <!-- Ultrasonic sensors -->
+    <g transform="translate(-45, -40)">
+      <circle cx="0" cy="0" r="8" fill="#ffcc80" stroke="#f57c00" stroke-width="2"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial" font-size="7" fill="#e65100">US</text>
+    </g>
+    <g transform="translate(45, -40)">
+      <circle cx="0" cy="0" r="8" fill="#ffcc80" stroke="#f57c00" stroke-width="2"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial" font-size="7" fill="#e65100">US</text>
+    </g>
+  </g>
+
+  <!-- Objects in environment -->
+  <!-- Table with objects -->
+  <rect x="200" y="450" width="150" height="15" fill="#8d6e63" stroke="#5d4037" stroke-width="2"/>
+  <rect x="200" y="420" width="15" height="30" fill="#ffab91" stroke="#e64a19" stroke-width="1"/>
+  <text x="207" y="435" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Cup</text>
+
+  <circle cx="275" cy="425" r="12" fill="#a5d6a7" stroke="#388e3c" stroke-width="1"/>
+  <text x="275" y="430" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Ball</text>
+
+  <rect x="320" y="415" width="20" height="20" fill="#90a4ae" stroke="#455a64" stroke-width="1"/>
+  <text x="330" y="428" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">Box</text>
+
+  <!-- Person -->
+  <g transform="translate(600, 420)">
+    <circle cx="0" cy="-40" r="15" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+    <rect x="-12" y="-25" width="24" height="40" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+    <rect x="-15" y="15" width="10" height="25" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+    <rect x="5" y="15" width="10" height="25" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Person</text>
+  </g>
+
+  <!-- Obstacle -->
+  <rect x="100" y="350" width="40" height="60" fill="#bcaaa4" stroke="#6d4c41" stroke-width="2"/>
+  <text x="120" y="385" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff">Wall</text>
+
+  <!-- Sensor fusion box -->
+  <g transform="translate(400, 200)">
+    <rect x="-100" y="0" width="200" height="80" rx="10" ry="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1565c0">Sensor Fusion</text>
+    <text x="0" y="45" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Data Processing & Integration</text>
+
+    <!-- Input arrows from sensors -->
+    <line x1="-100" y1="20" x2="-150" y2="-50" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="-100" y1="40" x2="-150" y2="-30" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="-100" y1="60" x2="-150" y2="-10" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Output arrow to perception -->
+    <line x1="100" y1="40" x2="150" y2="40" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Perception output -->
+  <g transform="translate(600, 200)">
+    <rect x="-80" y="0" width="160" height="80" rx="10" ry="10" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2e7d32">Perception Output</text>
+    <text x="0" y="45" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">3D Map, Objects, Environment Understanding</text>
+  </g>
+
+  <!-- Sensor types legend -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="220" height="140" fill="white" stroke="#ccc" stroke-width="1" rx="5" ry="5"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#333">Sensor Types</text>
+
+    <g transform="translate(10, 35)">
+      <circle cx="10" cy="0" r="8" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+      <text x="25" y="4" font-family="Arial" font-size="10" fill="#333">Cameras (Vision)</text>
+    </g>
+
+    <g transform="translate(10, 55)">
+      <rect x="5" y="-5" width="10" height="10" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+      <text x="25" y="4" font-family="Arial" font-size="10" fill="#333">LiDAR</text>
+    </g>
+
+    <g transform="translate(10, 75)">
+      <circle cx="10" cy="0" r="6" fill="#ffcc80" stroke="#f57c00" stroke-width="1"/>
+      <text x="25" y="4" font-family="Arial" font-size="10" fill="#333">Ultrasonic</text>
+    </g>
+
+    <g transform="translate(10, 95)">
+      <rect x="5" y="-5" width="10" height="10" fill="#ffab91" stroke="#e64a19" stroke-width="1"/>
+      <text x="25" y="4" font-family="Arial" font-size="10" fill="#333">RADAR</text>
+    </g>
+
+    <g transform="translate(10, 115)">
+      <rect x="5" y="-5" width="10" height="10" fill="#b39ddb" stroke="#5e35b1" stroke-width="1"/>
+      <text x="25" y="4" font-family="Arial" font-size="10" fill="#333">IMU</text>
+    </g>
+  </g>
+
+  <!-- Processing pipeline -->
+  <g transform="translate(200, 200)">
+    <rect x="0" y="0" width="120" height="40" rx="5" ry="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#e65100">Raw Sensor Data</text>
+
+    <line x1="120" y1="20" x2="150" y2="20" stroke="#ff9800" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <rect x="150" y="0" width="120" height="40" rx="5" ry="5" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+    <text x="210" y="25" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#01579b">Preprocessing</text>
+
+    <line x1="270" y1="20" x2="300" y2="20" stroke="#0277bd" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <rect x="300" y="0" width="120" height="40" rx="5" ry="5" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+    <text x="360" y="25" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#4a148c">Feature Extraction</text>
+  </g>
+
+  <!-- Arrowhead Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+      refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#333">Perception and Sensing Systems in Physical AI</text>
+  <text x="450" y="55" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Multiple sensor types work together to enable robots to understand their physical environment</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-label="Physical AI vs Virtual AI Comparison: Diagram showing differences between Physical AI systems that interact with the physical world and Virtual AI systems that operate in digital spaces only">
+  <title>Physical AI vs Virtual AI Comparison</title>
+  <desc>Comparison chart showing differences between Physical AI and Virtual AI systems. Left side shows Virtual AI with data, model, and output in a digital realm. Right side shows Physical AI with a robot interacting with the physical environment through sensors and actions.</desc>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc" />
+
+  <!-- Virtual AI Section -->
+  <rect x="50" y="50" width="300" height="300" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="10" />
+  <text x="200" y="80" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e40af">Virtual AI</text>
+
+  <!-- Virtual AI Elements -->
+  <circle cx="120" cy="150" r="20" fill="#93c5fd" />
+  <text x="120" y="180" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e40af">Data</text>
+
+  <circle cx="250" cy="150" r="20" fill="#93c5fd" />
+  <text x="250" y="180" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e40af">Model</text>
+
+  <circle cx="185" cy="230" r="20" fill="#93c5fd" />
+  <text x="185" y="260" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e40af">Output</text>
+
+  <line x1="120" y1="150" x2="250" y2="150" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="185" y1="170" x2="185" y2="210" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,5" />
+
+  <!-- Physical AI Section -->
+  <rect x="450" y="50" width="300" height="300" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="10" />
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#166534">Physical AI</text>
+
+  <!-- Physical AI Elements -->
+  <rect x="520" y="130" width="60" height="40" fill="#86efac" stroke="#16a34a" stroke-width="1" />
+  <text x="550" y="160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#166534">Robot</text>
+
+  <circle cx="650" cy="150" r="25" fill="#a7f3d0" stroke="#0d9488" stroke-width="1" />
+  <text x="650" y="185" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0f766e">Environment</text>
+
+  <path d="M 580 150 L 620 150 M 620 145 L 630 150 L 620 155 M 620 150 L 620 150" fill="none" stroke="#0f766e" stroke-width="2" />
+  <text x="600" y="140" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0f766e">Action</text>
+
+  <path d="M 650 180 L 650 210 M 645 200 L 650 210 L 655 200" fill="none" stroke="#0f766e" stroke-width="2" />
+  <text x="670" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#0f766e">Sensors</text>
+
+  <!-- Labels -->
+  <text x="200" y="370" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1e40af">Digital Realm Only</text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#166534">Physical Interaction</text>
+
+  <!-- Connection between sections -->
+  <path d="M 350 200 L 450 200" stroke="#64748b" stroke-width="2" stroke-dasharray="10,10" />
+  <text x="400" y="190" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#475569">vs</text>
+</svg>

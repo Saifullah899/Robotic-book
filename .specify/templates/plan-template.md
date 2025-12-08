@@ -31,7 +31,12 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Simplicity and Minimalism**: Implementation must follow minimalism principle, avoid over-engineering
+- **Technical Accuracy and Clarity**: All technical claims must be verifiable and based on established principles
+- **Accessibility and Beginner-Friendly**: Content must be suitable for beginners and intermediate learners
+- **Free-Tier Architecture**: Must use free-tier, low-resource technologies with lightweight assets only
+- **Quality and Professional Standards**: Must meet professional publishing standards with thorough proofreading
+- **Structured Learning Progression**: Content must follow logical educational sequence
 
 ## Project Structure
 

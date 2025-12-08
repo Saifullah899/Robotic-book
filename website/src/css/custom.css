@@ -1,0 +1,123 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2563eb; /* Modern blue for tech/robotics theme */
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Additional custom variables for textbook styling */
+  --textbook-accent-color: #0ea5e9; /* Sky blue for highlights */
+  --textbook-success-color: #10b981; /* Green for success/positive */
+  --textbook-warning-color: #f59e0b; /* Amber for warnings */
+  --textbook-danger-color: #ef4444; /* Red for errors/caution */
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #bfdbfe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode specific variables */
+  --textbook-accent-color: #38bdf8; /* Lighter sky blue for dark mode */
+  --textbook-success-color: #34d399; /* Lighter green for dark mode */
+  --textbook-warning-color: #fbbf24; /* Lighter amber for dark mode */
+  --textbook-danger-color: #f87171; /* Lighter red for dark mode */
+}
+
+/* Custom textbook styling */
+.textbook-highlight {
+  background-color: var(--textbook-accent-color);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.textbook-callout {
+  border-left: 4px solid var(--textbook-accent-color);
+  background-color: rgba(59, 130, 246, 0.05);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.textbook-definition {
+  border-left: 4px solid var(--textbook-success-color);
+  background-color: rgba(16, 185, 129, 0.05);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.textbook-caution {
+  border-left: 4px solid var(--textbook-warning-color);
+  background-color: rgba(245, 158, 11, 0.05);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.textbook-important {
+  border-left: 4px solid var(--textbook-danger-color);
+  background-color: rgba(239, 68, 68, 0.05);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Improve readability for textbook content */
+.markdown h1, .markdown h2, .markdown h3 {
+  font-weight: 600;
+}
+
+.markdown p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.markdown ul, .markdown ol {
+  margin-bottom: 1rem;
+}
+
+.markdown li {
+  margin-bottom: 0.25rem;
+}
+
+/* Better table styling for textbook */
+.markdown table {
+  display: table;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.markdown table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-color-emphasis-100);
+}

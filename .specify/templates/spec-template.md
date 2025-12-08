@@ -20,46 +20,46 @@
   - Demonstrated to users independently
 -->
 
-### User Story 1 - [Brief Title] (Priority: P1)
+### Chapter 1 - Introduction to Physical AI (Priority: P1)
 
-[Describe this user journey in plain language]
+Create the introductory chapter that defines Physical AI, explains the difference between virtual AI and embodied AI, and presents real-world applications. This chapter should be accessible to beginners and provide a foundation for understanding the rest of the textbook.
 
-**Why this priority**: [Explain the value and why it has this priority level]
+**Why this priority**: This chapter establishes the fundamental concepts that all other chapters build upon, making it essential for the educational progression.
 
-**Independent Test**: [Describe how this can be tested independently - e.g., "Can be fully tested by [specific action] and delivers [specific value]"]
+**Independent Test**: Chapter can be read independently and delivers foundational understanding of Physical AI concepts to students.
 
 **Acceptance Scenarios**:
 
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-2. **Given** [initial state], **When** [action], **Then** [expected outcome]
+1. **Given** a student with basic AI knowledge, **When** they read this chapter, **Then** they understand the core definition and scope of Physical AI
+2. **Given** a student reading this chapter, **When** they complete the chapter, **Then** they can distinguish between virtual AI and embodied AI
 
 ---
 
-### User Story 2 - [Brief Title] (Priority: P2)
+### Chapter 2 - Foundations of Robotics (Priority: P2)
 
-[Describe this user journey in plain language]
+Create the chapter that covers robot components (sensors, actuators, controllers), mechanical structures, and basic control logic. This chapter should build on the Physical AI concepts and introduce the mechanical aspects of robotics.
 
-**Why this priority**: [Explain the value and why it has this priority level]
+**Why this priority**: This chapter provides the essential mechanical foundation needed to understand humanoid robotics, following the logical educational sequence.
 
-**Independent Test**: [Describe how this can be tested independently]
+**Independent Test**: Chapter can be read independently and delivers understanding of basic robotics systems to students.
 
 **Acceptance Scenarios**:
 
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
+1. **Given** a student who has read Chapter 1, **When** they read this chapter, **Then** they understand the core components of robotic systems
 
 ---
 
-### User Story 3 - [Brief Title] (Priority: P3)
+### Chapter 3 - Human-Inspired Design Principles (Priority: P3)
 
-[Describe this user journey in plain language]
+Create the chapter that covers biomimicry in robotics, anthropomorphic structure, and ergonomics and balance concepts. This chapter should introduce the design principles that make robots humanoid.
 
-**Why this priority**: [Explain the value and why it has this priority level]
+**Why this priority**: This chapter introduces the core design philosophy of humanoid robotics, building on the foundational knowledge from previous chapters.
 
-**Independent Test**: [Describe how this can be tested independently]
+**Independent Test**: Chapter can be read independently and delivers understanding of biomimicry and anthropomorphic design to students.
 
 **Acceptance Scenarios**:
 
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
+1. **Given** a student who understands basic robotics, **When** they read this chapter, **Then** they understand the principles of human-inspired robotic design
 
 ---
 
@@ -72,8 +72,8 @@
   Fill them out with the right edge cases.
 -->
 
-- What happens when [boundary condition]?
-- How does system handle [error scenario]?
+- What happens when students access the textbook on low-bandwidth connections?
+- How does the textbook handle different screen sizes and accessibility requirements?
 
 ## Requirements *(mandatory)*
 
@@ -84,21 +84,21 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: Textbook MUST be built using Docusaurus framework for documentation
+- **FR-002**: Textbook MUST be deployed on GitHub Pages for accessibility
+- **FR-003**: Users MUST be able to navigate between chapters through sidebar
+- **FR-004**: Textbook MUST support both desktop and mobile viewing
+- **FR-005**: Content MUST be structured with clear headings and subheadings for readability
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+- **FR-006**: Textbook MUST include interactive elements [NEEDS CLARIFICATION: interactive features not specified - quizzes, simulations, code examples?]
+- **FR-007**: Textbook MUST include assessment materials [NEEDS CLARIFICATION: exercises, tests, or projects not specified]
 
 ### Key Entities *(include if feature involves data)*
 
-- **[Entity 1]**: [What it represents, key attributes without implementation]
-- **[Entity 2]**: [What it represents, relationships to other entities]
+- **Chapter**: Represents a textbook chapter with content, learning objectives, and exercises
+- **Diagram**: Represents visual content that supports understanding of concepts in chapters
 
 ## Success Criteria *(mandatory)*
 
@@ -109,7 +109,7 @@
 
 ### Measurable Outcomes
 
-- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
-- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
-- **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
-- **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+- **SC-001**: Students can read and understand Chapter 1 content within 30 minutes
+- **SC-002**: Textbook successfully builds without errors using Docusaurus
+- **SC-003**: 90% of users successfully navigate between textbook chapters without confusion
+- **SC-004**: Textbook loads in under 3 seconds on desktop and mobile devices

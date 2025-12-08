@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="650" viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <title>Manipulation and Interaction in Physical AI</title>
+  <desc>Diagram showing robot manipulation systems including end-effectors, grasping strategies, and human-robot interaction.</desc>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="900" height="650" fill="#fafafa" stroke="none"/>
+
+  <!-- Work surface/table -->
+  <rect x="100" y="400" width="700" height="200" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
+  <text x="450" y="590" text-anchor="middle" font-family="Arial" font-size="12" fill="#5d4037">Work Surface</text>
+
+  <!-- Robot arm with end-effector -->
+  <g transform="translate(200, 400)">
+    <!-- Robot base -->
+    <rect x="-30" y="0" width="60" height="40" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+    <!-- Lower arm -->
+    <rect x="-10" y="-200" width="20" height="200" fill="#e0e0e0" stroke="#616161" stroke-width="2"/>
+    <!-- Upper arm -->
+    <rect x="-10" y="-350" width="20" height="180" transform="rotate(-30 0 -290)" fill="#e0e0e0" stroke="#616161" stroke-width="2"/>
+    <!-- Wrist joint -->
+    <circle cx="0" cy="-350" r="12" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+    <!-- End-effector -->
+    <g transform="translate(0, -370)">
+      <!-- Parallel jaw gripper -->
+      <rect x="-25" y="-15" width="50" height="8" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+      <rect x="-25" y="7" width="50" height="8" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+      <!-- Fingers -->
+      <rect x="-30" y="-15" width="5" height="23" fill="#90caf9" stroke="#1976d2" stroke-width="1"/>
+      <rect x="25" y="-15" width="5" height="23" fill="#90caf9" stroke="#1976d2" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- Objects on work surface -->
+  <!-- Cylinder -->
+  <g transform="translate(400, 450)">
+    <rect x="-15" y="-30" width="30" height="60" rx="15" ry="15" fill="#a5d6a7" stroke="#388e3c" stroke-width="2"/>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cylinder</text>
+  </g>
+
+  <!-- Box -->
+  <g transform="translate(500, 460)">
+    <rect x="-20" y="-20" width="40" height="40" fill="#ffab91" stroke="#e64a19" stroke-width="2"/>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Box</text>
+  </g>
+
+  <!-- Spherical object -->
+  <g transform="translate(600, 460)">
+    <circle cx="0" cy="0" r="20" fill="#b39ddb" stroke="#5e35b1" stroke-width="2"/>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Sphere</text>
+  </g>
+
+  <!-- Grasp types section -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="350" height="150" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="175" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Grasp Types</text>
+
+    <!-- Power grasp -->
+    <g transform="translate(60, 70)">
+      <rect x="-15" y="-25" width="30" height="50" fill="#a5d6a7" stroke="#388e3c" stroke-width="2"/>
+      <rect x="-25" y="-15" width="10" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <rect x="15" y="-15" width="10" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <text x="0" y="40" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Power Grasp</text>
+    </g>
+
+    <!-- Precision grasp -->
+    <g transform="translate(175, 70)">
+      <rect x="-15" y="-25" width="30" height="50" fill="#a5d6a7" stroke="#388e3c" stroke-width="2"/>
+      <circle cx="-15" cy="-15" r="6" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <circle cx="15" cy="-15" r="6" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <text x="0" y="40" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Precision Grasp</text>
+    </g>
+
+    <!-- Pinch grasp -->
+    <g transform="translate(290, 70)">
+      <rect x="-15" y="-25" width="30" height="50" fill="#a5d6a7" stroke="#388e3c" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="6" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <circle cx="0" cy="10" r="6" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <text x="0" y="40" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Pinch Grasp</text>
+    </g>
+  </g>
+
+  <!-- End-effector types -->
+  <g transform="translate(500, 100)">
+    <rect x="0" y="0" width="350" height="150" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="175" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">End-Effector Types</text>
+
+    <!-- Parallel jaw gripper -->
+    <g transform="translate(70, 70)">
+      <rect x="-20" y="-10" width="40" height="5" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <rect x="-20" y="5" width="40" height="5" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+      <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Parallel Jaw</text>
+    </g>
+
+    <!-- Suction cup -->
+    <g transform="translate(175, 70)">
+      <circle cx="0" cy="0" r="15" fill="#ffcc80" stroke="#f57c00" stroke-width="2"/>
+      <circle cx="0" cy="0" r="8" fill="#ffab91" stroke="#e64a19" stroke-width="1"/>
+      <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Suction Cup</text>
+    </g>
+
+    <!-- Three-finger hand -->
+    <g transform="translate(280, 70)">
+      <circle cx="0" cy="-10" r="8" fill="#b39ddb" stroke="#5e35b1" stroke-width="2"/>
+      <line x1="0" y1="-2" x2="-8" y2="10" stroke="#5e35b1" stroke-width="3"/>
+      <line x1="0" y1="-2" x2="8" y2="10" stroke="#5e35b1" stroke-width="3"/>
+      <line x1="0" y1="-2" x2="0" y2="15" stroke="#5e35b1" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Three-Finger</text>
+    </g>
+  </g>
+
+  <!-- Human-robot interaction -->
+  <g transform="translate(50, 300)">
+    <rect x="0" y="0" width="350" height="80" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="175" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Human-Robot Interaction</text>
+
+    <!-- Human -->
+    <g transform="translate(70, 50)">
+      <circle cx="0" cy="-20" r="10" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+      <rect x="-8" y="-10" width="16" height="25" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+      <rect x="-10" y="15" width="6" height="15" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+      <rect x="4" y="15" width="6" height="15" fill="#e0e0e0" stroke="#757575" stroke-width="1"/>
+    </g>
+
+    <!-- Robot -->
+    <g transform="translate(280, 50)">
+      <rect x="-15" y="-15" width="30" height="25" fill="#f5f5f5" stroke="#455a64" stroke-width="2"/>
+      <circle cx="-10" cy="15" r="4" fill="#78909c" stroke="#546e7a" stroke-width="1"/>
+      <circle cx="10" cy="15" r="4" fill="#78909c" stroke="#546e7a" stroke-width="1"/>
+    </g>
+
+    <!-- Interaction arrow -->
+    <line x1="85" y1="35" x2="265" y2="35" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <text x="175" y="30" text-anchor="middle" font-family="Arial" font-size="9" fill="#2e7d32">Collaboration</text>
+  </g>
+
+  <!-- Manipulation primitives -->
+  <g transform="translate(500, 300)">
+    <rect x="0" y="0" width="350" height="200" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="175" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Manipulation Primitives</text>
+
+    <!-- Pick action -->
+    <g transform="translate(70, 60)">
+      <rect x="-15" y="-20" width="30" height="40" fill="#ffab91" stroke="#e64a19" stroke-width="2"/>
+      <line x1="0" y1="-30" x2="0" y2="-50" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowhead)"/>
+      <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Pick</text>
+    </g>
+
+    <!-- Place action -->
+    <g transform="translate(175, 60)">
+      <rect x="-15" y="0" width="30" height="40" fill="#ffab91" stroke="#e64a19" stroke-width="2"/>
+      <line x1="0" y1="-10" x2="0" y2="-30" stroke="#f44336" stroke-width="3" marker-end="url(#arrowhead)"/>
+      <text x="0" y="50" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Place</text>
+    </g>
+
+    <!-- Push action -->
+    <g transform="translate(280, 60)">
+      <rect x="-15" y="-10" width="30" height="40" fill="#a5d6a7" stroke="#388e3c" stroke-width="2"/>
+      <line x1="-25" y1="0" x2="-45" y2="0" stroke="#ff9800" stroke-width="3" marker-end="url(#arrowhead)"/>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Push</text>
+    </g>
+
+    <!-- Grasp quality -->
+    <g transform="translate(125, 140)">
+      <circle cx="0" cy="0" r="25" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">Force</text>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">Closure</text>
+    </g>
+
+    <!-- Stability -->
+    <g transform="translate(225, 140)">
+      <circle cx="0" cy="0" r="25" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="10" fill="#e65100">Stable</text>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial" font-size="10" fill="#e65100">Grasp</text>
+    </g>
+  </g>
+
+  <!-- Control strategies -->
+  <g transform="translate(50, 420)">
+    <rect x="0" y="0" width="350" height="180" fill="white" stroke="#ccc" stroke-width="2" rx="5" ry="5"/>
+    <text x="175" y="20" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Control Strategies</text>
+
+    <!-- Impedance control -->
+    <g transform="translate(85, 70)">
+      <rect x="-30" y="-15" width="60" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="9" fill="#1565c0">Impedance</text>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial" font-size="9" fill="#1565c0">Control</text>
+    </g>
+
+    <!-- Force control -->
+    <g transform="translate(265, 70)">
+      <rect x="-30" y="-15" width="60" height="30" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="9" fill="#6a1b9a">Force</text>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial" font-size="9" fill="#6a1b9a">Control</text>
+    </g>
+
+    <!-- Position control -->
+    <g transform="translate(85, 130)">
+      <rect x="-30" y="-15" width="60" height="30" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="9" fill="#2e7d32">Position</text>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial" font-size="9" fill="#2e7d32">Control</text>
+    </g>
+
+    <!-- Hybrid control -->
+    <g transform="translate(265, 130)">
+      <rect x="-30" y="-15" width="60" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="9" fill="#e65100">Hybrid</text>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial" font-size="9" fill="#e65100">Control</text>
+    </g>
+  </g>
+
+  <!-- Arrowhead Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+      refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#333">Manipulation and Interaction in Physical AI</text>
+  <text x="450" y="55" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">End-effectors, grasping strategies, and human-robot collaboration for physical interaction</text>
+</svg>

@@ -1,55 +1,56 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: N/A → 1.0.0 (Initial version for this project)
+Modified principles: N/A (new constitution)
+Added sections: All sections (new project constitution)
+Removed sections: N/A
+Templates requiring updates:
+- .specify/templates/plan-template.md ✅ updated
+- .specify/templates/spec-template.md ✅ updated
+- .specify/templates/tasks-template.md ✅ updated
+- .specify/templates/commands/*.md ✅ reviewed
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics – Essentials Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity and Minimalism
+All features and implementations must follow the principle of minimalism. Start simple, avoid over-engineering, and prioritize the essential functionality. No feature should be added without clear justification for its necessity in explaining Physical AI and Humanoid Robotics fundamentals.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Technical Accuracy and Clarity
+All content must be technically accurate and clearly explained. Complex concepts must be broken down into accessible explanations suitable for beginners and intermediate learners. All technical claims must be verifiable and based on established principles in robotics and AI.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Accessibility and Beginner-Friendly Approach
+All content must be designed with accessibility in mind. Technical jargon must be explained or avoided, and concepts should be presented in a logical progression that builds understanding. Content must be structured with clear headings, short paragraphs, and bullet points for key ideas.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Free-Tier Architecture and Lightweight Implementation
+The textbook must be built using free-tier, low-resource technologies. All assets must be lightweight (SVG, small PNG), and the implementation must avoid heavy libraries or backend services. The solution must remain static-site only to ensure accessibility and fast loading.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Quality and Professional Standards
+All content must meet professional publishing standards. This includes clear writing, consistent formatting, proper grammar, and thorough proofreading. Every chapter must undergo validation for technical accuracy, relevance, and clear explanation before being considered complete.
 
-### [PRINCIPLE_6_NAME]
+### VI. Structured Learning Progression
+Content must follow a logical educational sequence that builds understanding progressively. Each chapter must connect to previous concepts while introducing new ones in a coherent manner. The structure must support both linear reading and targeted reference.
 
+## Technical Requirements
 
-[PRINCIPLE__DESCRIPTION]
+The textbook will be built using Docusaurus and deployed on GitHub Pages. Content will be written using Spec-Kit Plus structure with generation and refinement through Claude Code. All assets must be lightweight with no heavy libraries or backend dependencies. The solution must be a static site only with no external runtime dependencies.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Content Guidelines
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+Content must feature clear and concise explanations, short paragraphs, bullet points for key ideas, diagrams in SVG when needed, minimal jargon with explained terminology, and consistent formatting across chapters. The writing style must be professional, technical but accessible, with minimal fluff and high-density, high-value content structured in headings and subheadings.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## UI & Design Principles
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+The interface must use a clean, modern Docusaurus default theme with high contrast and readability. It must feature a simple navigation bar and chapter-based sidebar with no clutter or visual overload. The design must prioritize fast load times and mobile/desktop compatibility.
+
+## Research and Validation Requirements
+
+Content must be developed with research-concurrent writing approach, with information verified while writing. Focus must remain on widely accepted robotics and AI fundamentals. Each chapter must meet relevance to topic, technical accuracy, clear explanation, and concise length criteria. A terminology consistency check and final proofreading pass must occur before completion.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all development decisions for the Physical AI & Humanoid Robotics textbook project. All implementations must comply with these principles. Amendments to this constitution require explicit documentation of the change, its rationale, and approval from project stakeholders. All pull requests and reviews must verify compliance with these principles. The project must maintain its free-tier, lightweight architecture and educational focus throughout its lifecycle.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-09 | **Last Amended**: 2025-12-09

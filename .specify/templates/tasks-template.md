@@ -1,6 +1,6 @@
 ---
 
-description: "Task list template for feature implementation"
+description: "Task list template for Physical AI & Humanoid Robotics textbook implementation"
 ---
 
 # Tasks: [FEATURE NAME]
@@ -48,9 +48,9 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T001 Create Docusaurus project structure per implementation plan
+- [ ] T002 Initialize Docusaurus with GitHub Pages configuration
+- [ ] T003 [P] Configure content organization for textbook chapters
 
 ---
 
@@ -62,83 +62,83 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T004 Configure Docusaurus theme and navigation structure
+- [ ] T005 [P] Setup chapter organization and sidebar configuration
+- [ ] T006 [P] Configure deployment workflow for GitHub Pages
+- [ ] T007 Create base content structure that all chapters depend on
+- [ ] T008 Configure content validation and quality checks
+- [ ] T009 Setup environment for content development and preview
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
 ---
 
-## Phase 3: User Story 1 - [Title] (Priority: P1) 🎯 MVP
+## Phase 3: User Story 1 - [Chapter Title] (Priority: P1) 🎯 MVP
 
-**Goal**: [Brief description of what this story delivers]
+**Goal**: [Brief description of what this chapter delivers]
 
-**Independent Test**: [How to verify this story works on its own]
+**Independent Test**: [How to verify this chapter is complete and educational]
 
-### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
+### Content Validation for User Story 1 (OPTIONAL - only if validation requested) ⚠️
 
-> **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
+> **NOTE: Write these validation checks FIRST, ensure they FAIL before implementation**
 
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T010 [P] [US1] Content accuracy validation for [chapter] in content/validation/test_[name].md
+- [ ] T011 [P] [US1] Educational effectiveness test for [learning objective] in content/validation/test_[name].md
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T012 [P] [US1] Create Introduction to Physical AI chapter content in docs/chapter-1/[chapter].md
+- [ ] T013 [P] [US1] Add diagrams and illustrations for [concept] in static/img/chapter-1/[diagram].svg
+- [ ] T014 [US1] Implement educational structure with headings and examples in docs/chapter-1/[chapter].md
+- [ ] T015 [US1] Add cross-references to related concepts in docs/chapter-1/[chapter].md
+- [ ] T016 [US1] Add summary and key takeaways section
+- [ ] T017 [US1] Add exercises or thought questions for student engagement
 
-**Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
+**Checkpoint**: At this point, Chapter 1 should be fully educational and testable independently
 
 ---
 
-## Phase 4: User Story 2 - [Title] (Priority: P2)
+## Phase 4: User Story 2 - [Chapter Title] (Priority: P2)
 
-**Goal**: [Brief description of what this story delivers]
+**Goal**: [Brief description of what this chapter delivers]
 
-**Independent Test**: [How to verify this story works on its own]
+**Independent Test**: [How to verify this chapter is complete and educational]
 
-### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
+### Content Validation for User Story 2 (OPTIONAL - only if validation requested) ⚠️
 
-- [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T018 [P] [US2] Content accuracy validation for [chapter] in content/validation/test_[name].md
+- [ ] T019 [P] [US2] Educational effectiveness test for [learning objective] in content/validation/test_[name].md
 
 ### Implementation for User Story 2
 
-- [ ] T020 [P] [US2] Create [Entity] model in src/models/[entity].py
+- [ ] T020 [P] [US2] Create Foundations of Robotics chapter content in docs/chapter-2/[chapter].md
 - [ ] T021 [US2] Implement [Service] in src/services/[service].py
-- [ ] T022 [US2] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T023 [US2] Integrate with User Story 1 components (if needed)
+- [ ] T022 [US2] Add illustrations for [concept] in static/img/chapter-2/[diagram].svg
+- [ ] T023 [US2] Integrate with User Story 1 concepts (if needed)
 
-**Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
+**Checkpoint**: At this point, Chapters 1 AND 2 should both be educational and independent
 
 ---
 
-## Phase 5: User Story 3 - [Title] (Priority: P3)
+## Phase 5: User Story 3 - [Chapter Title] (Priority: P3)
 
-**Goal**: [Brief description of what this story delivers]
+**Goal**: [Brief description of what this chapter delivers]
 
-**Independent Test**: [How to verify this story works on its own]
+**Independent Test**: [How to verify this chapter is complete and educational]
 
-### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
+### Content Validation for User Story 3 (OPTIONAL - only if validation requested) ⚠️
 
-- [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T024 [P] [US3] Content accuracy validation for [chapter] in content/validation/test_[name].md
+- [ ] T025 [P] [US3] Educational effectiveness test for [learning objective] in content/validation/test_[name].md
 
 ### Implementation for User Story 3
 
-- [ ] T026 [P] [US3] Create [Entity] model in src/models/[entity].py
-- [ ] T027 [US3] Implement [Service] in src/services/[service].py
-- [ ] T028 [US3] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T026 [P] [US3] Create Human-Inspired Design Principles chapter content in docs/chapter-3/[chapter].md
+- [ ] T027 [US3] Add illustrations for [concept] in static/img/chapter-3/[diagram].svg
+- [ ] T028 [US3] Implement educational examples and case studies in docs/chapter-3/[chapter].md
 
-**Checkpoint**: All user stories should now be independently functional
+**Checkpoint**: All chapters should now be independently educational
 
 ---
 
@@ -148,14 +148,14 @@ Examples of foundational tasks (adjust based on your project):
 
 ## Phase N: Polish & Cross-Cutting Concerns
 
-**Purpose**: Improvements that affect multiple user stories
+**Purpose**: Improvements that affect multiple chapters
 
-- [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
-- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
-- [ ] TXXX Run quickstart.md validation
+- [ ] TXXX [P] Textbook-wide content consistency review in docs/
+- [ ] TXXX Style and formatting cleanup across all chapters
+- [ ] TXXX Cross-references and navigation optimization
+- [ ] TXXX [P] Additional educational validation (if requested) in content/validation/
+- [ ] TXXX Accessibility and readability improvements
+- [ ] TXXX Run textbook deployment validation
 
 ---
 

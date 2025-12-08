@@ -1,0 +1,78 @@
+.chapters {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+.chapterSectionTitle {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.chapterSectionSubtitle {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 3rem;
+}
+
+.chapterCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chapterCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.chapterTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.priorityBadge {
+  font-size: 0.75rem;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.chapterCard .card__footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.chapterCard .button {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 996px) {
+  .chapters {
+    padding: 2rem 0;
+  }
+
+  .chapterSectionTitle {
+    font-size: 2rem;
+  }
+
+  .chapterSectionSubtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chapterTitle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .priorityBadge {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+}

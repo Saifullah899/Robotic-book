@@ -1,5 +1,6 @@
 {
   "version": 2,
   "framework": "docusaurus",
-  "rootDirectory": "website"
+  "rootDirectory": "website",
+  "buildCommand": "cd website && npm install && npx docusaurus build --base-url /"
 }

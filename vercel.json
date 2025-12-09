@@ -1,6 +1,23 @@
 {
   "version": 2,
-  "framework": "docusaurus",
-  "rootDirectory": "website",
-  "buildCommand": "cd website && npm install && npx docusaurus build --base-url /"
+  "builds": [
+    {
+      "src": "website/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "status": 200
+    }
+  ],
+  "github": {
+    "enabled": true,
+    "autoJobCancelation": true
+  }
 }

@@ -1,6 +1,10 @@
 {
   "version": 2,
   "framework": "docusaurus",
+  "settings": {
+    "buildCommand": "npm install && npm run build",
+    "outputDirectory": "build"
+  },
   "builds": [
     {
       "src": "package.json",

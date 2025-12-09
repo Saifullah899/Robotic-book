@@ -1,5 +1,11 @@
 {
   "version": 2,
+  "framework": "docusaurus",
+  "settings": {
+    "buildCommand": "cd website && npm install && npm run build",
+    "outputDirectory": "website/build",
+    "rootDirectory": "website"
+  },
   "builds": [
     {
       "src": "website/package.json",
@@ -12,12 +18,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "website/index.html"
     }
-  ],
-  "github": {
-    "enabled": true,
-    "autoAlias": true
-  },
-  "framework": "docusaurus"
+  ]
 }

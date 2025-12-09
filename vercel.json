@@ -1,11 +1,13 @@
 {
   "version": 2,
+  "framework": "docusaurus",
+  "rootDirectory": "website",
   "builds": [
     {
       "src": "website/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "website/build"
+        "distDir": "build"
       }
     }
   ],

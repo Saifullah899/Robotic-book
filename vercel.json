@@ -1,23 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "website/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html",
-      "status": 200
-    }
-  ],
-  "github": {
-    "enabled": true,
-    "autoJobCancelation": true
-  }
+  "framework": "docusaurus",
+  "rootDirectory": "website"
 }

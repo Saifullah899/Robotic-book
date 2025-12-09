@@ -18,5 +18,6 @@
   "github": {
     "enabled": true,
     "autoAlias": true
-  }
+  },
+  "framework": "docusaurus"
 }

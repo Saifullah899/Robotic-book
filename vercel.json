@@ -14,5 +14,6 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "buildCommand": "cd website && npm install && npm run build:vercel"
 }

@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://robotic-book-8i45.vercel.app',
+  url: 'https://robotic-book-pi.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For Vercel deployment, serve from root
   baseUrl: '/',
